@@ -68,9 +68,9 @@ Finally, we will train our model using GridSearch, of which, the best model will
 ### Modelling
 ---
 
-Using SVC (our best performing model), we achieved an ROC_AUC of **0.96207**. GridSearchCV and cross_val_score were used to tune the respective classifier with the optimised hyperparameters and then check if the learning algorithm is capable of yielding high mean score and low variances as we would want the selected learning algorithm to be capable of producing similar performance on unseen data. In this case it will be the test set provided by kaggle.
+Using XGBoost (our best performing model), we achieved an ROC_AUC of **0.8511**. GridSearchCV and cross_val_score were used to tune the respective classifier with the optimised hyperparameters and then check if the learning algorithm is capable of yielding high mean score and low variances as we would want the selected learning algorithm to be capable of producing similar performance on unseen data. In this case it will be the test set provided by kaggle.
 
-By comparing the above scores, the final learning algorithm that is choosen is Support Vector Classification. Using the best parameters selected C = 1000, gamma = 0.002154(rounded to 6 decimal places) and kernel = 'rbf.
+By comparing the above scores, the final learning algorithm that is choosen is XGBoost. Using the best parameters selected are `colsample_bytree = 0.2`, `gamma = 0.03`, `learning_rate = 0.1`, `max_depth = 3`, `reg_alpha = 0`, `reg_lambda = 1`, `subsample = 0.5`.
     
     
 
